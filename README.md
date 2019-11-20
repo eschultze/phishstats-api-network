@@ -10,7 +10,7 @@ This code was built using python 2.7 and then changed to python 3. The only diff
 
 Download `git clone https://github.com/eschultze/phishstats-api-network`
 
-Into directory `cd phishstats-api-network/` and `rm -f graph_example*`
+Into directory `cd phishstats-api-network/`
 
 Install packages `pip3 install -r requirements.txt`
 
@@ -38,10 +38,10 @@ Install packages `pip3 install -r requirements.txt`
 
 ## How are the results?
 
-![Example 1](https://github.com/eschultze/phishstats-api-network/blob/master/graph_example_1.png)
+![Example 1](https://phishstats.info/api-network/graph_example_1.png)
 
-![Example 2](https://github.com/eschultze/phishstats-api-network/blob/master/graph_example_2.png)
+![Example 2](https://phishstats.info/api-network/graph_example_2.png)
 
-![Example 3](https://github.com/eschultze/phishstats-api-network/blob/master/graph_example_3.png)
+![Example 3](https://phishstats.info/api-network/graph_example_3.png)
 
-![Example 4](https://github.com/eschultze/phishstats-api-network/blob/master/graph_example_4.png)
+![Example 4](https://phishstats.info/api-network/graph_example_4.png)
