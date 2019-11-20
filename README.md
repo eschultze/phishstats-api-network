@@ -38,10 +38,10 @@ Install packages `pip3 install -r requirements.txt`
 
 ## How are the results?
 
-![Example 1](https://phishstats.info/api-network/graph_example_1.png)
+![Example 1](https://phishstats.info/graph_example_1.png)
 
-![Example 2](https://phishstats.info/api-network/graph_example_2.png)
+![Example 2](https://phishstats.info/graph_example_2.png)
 
-![Example 3](https://phishstats.info/api-network/graph_example_3.png)
+![Example 3](https://phishstats.info/graph_example_3.png)
 
-![Example 4](https://phishstats.info/api-network/graph_example_4.png)
+![Example 4](https://phishstats.info/graph_example_4.png)
