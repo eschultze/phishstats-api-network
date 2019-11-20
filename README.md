@@ -36,12 +36,6 @@ Install packages `pip3 install -r requirements.txt`
 
 `phishapinetwork.py url like ~brandyouwanttofind~` (change it for brands you know are being targeted)
 
-## How are the results?
+## How is the output?
 
 ![Example 1](https://phishstats.info/graph_example_1.png)
-
-![Example 2](https://phishstats.info/graph_example_2.png)
-
-![Example 3](https://phishstats.info/graph_example_3.png)
-
-![Example 4](https://phishstats.info/graph_example_4.png)
