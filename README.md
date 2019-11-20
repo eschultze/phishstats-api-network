@@ -26,7 +26,7 @@ Install packages `pip3 install -r requirements.txt`
 
 `phishapinetwork.py tld eq br` (for phishing with .br domains)
 
-`phishapinetwork.py countryname eq brazil` (for phishing hosted in Brazil)
+`phishapinetwork.py countrycode eq br` (for phishing hosted in Brazil)
 
 `phishapinetwork.py title asn eq as13335` (for phishing using Cloudflare)
 
