@@ -7,7 +7,7 @@ import requests
 import sys
 import webbrowser
 
-print("Phishstats.info API Network - v0.1")
+print("Phishstats.info API Network - v0.2")
 
 #Cheking for arguments
 if len(sys.argv) <= 3:
