@@ -21,9 +21,12 @@ search = sys.argv[3]
 #Making the API request
 r = requests.get(
 	'https://phishstats.info:2096/api/phishing',
-	params = {'_where':'('+ column +','+ compare +','+ search +')', '_fields':'url,title,host,domain,ip,countryname,asn,isp,n_times_seen_ip,n_times_seen_host,n_times_seen_domain', '_sort':'-id', '_size':'100'},
+	params = {'_where':'('+ column +','+ compare +','+ search +')', '_sort':'-id', '_size':'100'},
 	headers = {'User-Agent':'github-network-api'}
 )
+
+#Print the request URL
+#print(r.url)
 
 #Loading the output as json
 output = json.loads(r.text)
@@ -57,8 +60,11 @@ for entry in output:
 
 	new_url = entry['url']
 	new_url = '{}'.format(new_url)
+	new_url_http_code = entry['http_code']
+	new_url_http_server = entry['http_server']
+	new_url_safebrowsing = entry['google_safebrowsing']
 	if new_url != "":
-		g.add_node("URL-" + str(url_number), title = new_url, color = "#1ba1e2")
+		g.add_node("URL-" + str(url_number), title = (new_url + "<br> HTTP code: " + str(new_url_http_code) + "<br> HTTP server: " + str(new_url_http_server) + "<br> Safebrowsing: " + str(new_url_safebrowsing)), color = "#1ba1e2")
 
 	new_title = entry['title']
 	new_title = '{}'.format(new_title)
@@ -71,9 +77,15 @@ for entry in output:
 
 	new_ip = entry['ip']
 	new_ip = '{}'.format(new_ip)
+
 	if new_ip != "":
 		new_ip_times = entry['n_times_seen_ip']
-		g.add_node(new_ip, title = ("n_times_seen_ip:" + str(new_ip_times)), color = "#006699")
+		new_ip_vulns = entry['vulns']
+		new_ip_ports = entry['ports']
+		new_ip_tags = entry['tags']
+		new_ip_os = entry['os']
+		new_ip_abusech = entry['abuse_ch_malware']
+		g.add_node(new_ip, title = ("N times seen IP: " + str(new_ip_times) + "<br> Vulnerabilities: " + str(new_ip_vulns) + "<br> Ports: " + str(new_ip_ports) + "<br> Tags: " + str(new_ip_tags) + "<br> OS: " + str(new_ip_os) + "<br> Abuse.ch (Malware): " + str(new_ip_abusech)), color = "#006699")
 
 	if new_url != "":
 		if new_ip != "":
@@ -85,7 +97,9 @@ for entry in output:
 	if new_host != "":
 		if new_host != new_ip:
 			new_host_times = entry['n_times_seen_host']
-			g.add_node(new_host, title = ("n_times_seen_host:" + str(new_host_times)), color = "#008080")
+			new_host_alexa = entry['alexa_rank_host']
+			new_host_abusech = entry['abuse_ch_malware']
+			g.add_node(new_host, title = ("N times seen Hostname: " + str(new_host_times) + "<br> Alexa rank: " + str(new_host_alexa) + "<br> Abuse.ch (Malware): " + str(new_host_abusech)), color = "#008080")
 
 	if new_url != "":
 		if new_host != "":
@@ -97,7 +111,12 @@ for entry in output:
 		if new_domain != "None":
 			if new_host != new_domain:
 				new_domain_times = entry['n_times_seen_domain']
-				g.add_node(new_domain, title = ("n_times_seen_domain:" + str(new_domain_times)), color = "#eed514")
+				new_domain_days_ago = entry['domain_registered_n_days_ago']
+				new_domain_alexa = entry['alexa_rank_domain']
+				new_domain_virustotal = entry['virus_total']
+				new_domain_threat_crowd = entry['threat_crowd']
+				new_domain_threat_crowd_votes = entry['threat_crowd_votes']
+				g.add_node(new_domain, title = ("N times seen Domain: " + str(new_domain_times) + "<br> Domain registered N days ago: " + str(new_domain_days_ago) + "<br> Alexa rank: " + str(new_domain_alexa) + "<br> Virustotal: " + str(new_domain_virustotal) + "<br> ThreatCrowd: " + str(new_domain_threat_crowd) + "<br> ThreatCrowd votes: " + str(new_domain_threat_crowd_votes)), color = "#eed514")
 
 	if new_domain != "":
 		if new_host != "":
