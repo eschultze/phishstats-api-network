@@ -3,8 +3,11 @@
 ## Visualize networks (pyvis) of phishing by querying the phishstats.info API
 
 Changelog
+
 v0.1 - Initial release
+
 v0.2 - Shodan integration
+
 v0.3 - Technologies used to build the website/phishing
 
 This code was built using python 2.7 and then changed to python 3. The only difference is the way prints are made, everything else works fine on both versions.
