@@ -7,7 +7,7 @@ import requests
 import sys
 import webbrowser
 
-print("Phishstats.info API Network - v0.2")
+print("Phishstats.info API Network - v0.3")
 
 #Cheking for arguments
 if len(sys.argv) <= 3:
@@ -63,8 +63,9 @@ for entry in output:
 	new_url_http_code = entry['http_code']
 	new_url_http_server = entry['http_server']
 	new_url_safebrowsing = entry['google_safebrowsing']
+	new_url_technology = entry['technology']
 	if new_url != "":
-		g.add_node("URL-" + str(url_number), title = (new_url + "<br> HTTP code: " + str(new_url_http_code) + "<br> HTTP server: " + str(new_url_http_server) + "<br> Safebrowsing: " + str(new_url_safebrowsing)), color = "#1ba1e2")
+		g.add_node("URL-" + str(url_number), title = (new_url + "<br> HTTP code: " + str(new_url_http_code) + "<br> HTTP server: " + str(new_url_http_server) + "<br> Safebrowsing: " + str(new_url_safebrowsing) + "<br> Technologies:" + str(new_url_technology)), color = "#1ba1e2")
 
 	new_title = entry['title']
 	new_title = '{}'.format(new_title)
