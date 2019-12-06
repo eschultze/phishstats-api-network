@@ -2,6 +2,11 @@
 
 ## Visualize networks (pyvis) of phishing by querying the phishstats.info API
 
+Changelog
+v0.1 - Initial release
+v0.2 - Shodan integration
+v0.3 - Technologies used to build the website/phishing
+
 This code was built using python 2.7 and then changed to python 3. The only difference is the way prints are made, everything else works fine on both versions.
 
 ## Main purpose is to query phishstats.info API and create a graph network where nodes are: URL, website title, hostname, domain, IP, country, ASN (autonomous system number) and ISP. A maximum of the last 100 results are returned and used to create the network.
