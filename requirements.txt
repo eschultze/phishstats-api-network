@@ -5,4 +5,4 @@
 pyvis == 0.1.7.0
 
 # phishapinetwork.py: 6
-requests == 2.22.0
+requests == 2.31.0
