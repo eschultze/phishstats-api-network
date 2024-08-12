@@ -1,16 +1,6 @@
-## phishstats-api-network
+## phishstats-api-network - visualize networks of phishing by querying phishstats.info API
 
-## Visualize networks of phishing by querying phishstats.info API
-
-Changelog
-
-v0.1 - Initial release.
-
-v0.2 - Shodan integration.
-
-v0.3 - Technologies used to build the website/phishing.
-
-v0.4 - Enhanced error handling, added dynamic timeout management and support for optional input parameters.
+![image](https://github.com/user-attachments/assets/0c1f904c-0aa4-436f-bf0b-1dca3a484fa3)
 
 ## Overview
 
@@ -46,6 +36,11 @@ Install packages `pip3 install -r requirements.txt`
 
 `phishapinetwork.py url like ~brandyouwanttofind~` (change it for brands you know are being targeted)
 
-## How is the output?
+## Changelog
+v0.1 - Initial release.
 
-![Example 1](https://phishstats.info/graph_example_1.png)
+v0.2 - Fetch data from Shodan integration.
+
+v0.3 - Fetch technologies used by the phishing.
+
+v0.4 - Enhanced error handling, added dynamic timeout management, support for optional input parameters and color scheme by Dracula theme.
