@@ -1,20 +1,22 @@
 ## phishstats-api-network
 
-## Visualize networks (pyvis) of phishing by querying the phishstats.info API
+## Visualize networks of phishing by querying phishstats.info API
 
 Changelog
 
-v0.1 - Initial release
+v0.1 - Initial release.
 
-v0.2 - Shodan integration
+v0.2 - Shodan integration.
 
-v0.3 - Technologies used to build the website/phishing
+v0.3 - Technologies used to build the website/phishing.
 
-This code was built using python 2.7 and then changed to python 3. The only difference is the way prints are made, everything else works fine on both versions.
+v0.4 - Enhanced error handling, added dynamic timeout management and support for optional input parameters.
 
-## Main purpose is to query phishstats.info API and create a graph network where nodes are: URL, website title, hostname, domain, IP, country, ASN (autonomous system number) and ISP. A maximum of the last 100 results are returned and used to create the network.
+## Overview
 
-**PS:** the output file is a .html to be opened in a browser. If you run this tool on a server you won't be able to see the graph network.
+The **PhishStats API Network** tool allows users to visualize phishing networks by querying the [phishstats.info](https://phishstats.info) API. It generates an interactive graph network using the `pyvis` library, where nodes represent key elements like URLs, website titles, hostnames, domains, IP addresses, countries, Autonomous System Numbers (ASNs), and Internet Service Providers (ISPs). The tool processes up to the last 100 phishing incidents to build these networks.
+
+**Please note**: The generated output is an HTML file designed to be viewed in a browser. If you run this tool on a headless server, you might not be able to view the network graph directly.
 
 Download `git clone https://github.com/eschultze/phishstats-api-network`
 
